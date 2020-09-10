@@ -1,0 +1,25 @@
+.secondimage{
+    background-image: url("../img/Image2.jpg");
+    min-height: 400px;
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    &__title{
+        position:absolute;
+        width:100%;
+        top:50%;
+
+        &--main{
+            display: inline;
+            color:$Textcolor3 ;
+            text-align:center;
+            letter-spacing:8px;
+            font-size:27px;
+            padding: 20px;                     
+        }
+    }
+}

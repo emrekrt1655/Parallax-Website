@@ -1,0 +1,8 @@
+@media(max-width: 568px){
+    .firstimage, .secondimage, .thirdimage, .fourthimage{
+        background-attachment: scroll ;
+    }
+    .fourthimage__title{
+        width: auto;
+    }
+}
