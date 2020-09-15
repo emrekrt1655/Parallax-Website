@@ -1,8 +1,15 @@
 @media(max-width: 568px){
     .firstimage, .secondimage, .thirdimage, .fourthimage{
-        background-attachment: scroll ;
+        background-attachment: fixed ;
     }
     .fourthimage__title{
         width: auto;
+    }
+    
+    h1{
+        font-size: 20px;
+    }
+    .fourthimage__title--main{
+        font-size: 16px;
     }
 }

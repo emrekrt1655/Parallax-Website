@@ -185,12 +185,71 @@ body, html {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+.toogle {
+  position: absolute;
+  z-index: 1;
+  top: 3px;
+}
+
+.toogle [type="checkbox"]:not(:checked), .toogle [type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+.toogle [type="checkbox"]:not(:checked) + label, .toogle [type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 4em;
+  padding-top: .25em;
+  cursor: pointer;
+}
+
+.toogle [type="checkbox"]:not(:checked) + label:before, .toogle [type="checkbox"]:checked + label:before, .toogle [type="checkbox"]:not(:checked) + label:after, .toogle [type="checkbox"]:checked + label:after {
+  content: '';
+  position: absolute;
+  height: 1.5em;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+.toogle [type="checkbox"]:not(:checked) + label:before, .toogle [type="checkbox"]:checked + label:before {
+  left: 0;
+  top: 0;
+  width: 3em;
+  border: 2px solid #dddddd;
+  background: #dddddd;
+  border-radius: 1.1em;
+  z-index: -1;
+}
+
+.toogle [type="checkbox"]:not(:checked) + label:after, .toogle [type="checkbox"]:checked + label:after {
+  left: .15em;
+  top: .125em;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 1.5em;
+}
+
+.toogle [type="checkbox"]:checked + label:after {
+  left: 1.65em;
+}
+
+.toogle [type="checkbox"]:checked + label:before {
+  background-color: #1e0c88;
+  border-color: #1e0c88;
+}
+
 @media (max-width: 568px) {
   .firstimage, .secondimage, .thirdimage, .fourthimage {
-    background-attachment: scroll;
+    background-attachment: fixed;
   }
   .fourthimage__title {
     width: auto;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  .fourthimage__title--main {
+    font-size: 16px;
   }
 }
 /*# sourceMappingURL=style.css.map */
